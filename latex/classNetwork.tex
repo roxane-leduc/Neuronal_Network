@@ -1,0 +1,238 @@
+\hypertarget{classNetwork}{}\doxysection{Network Class Reference}
+\label{classNetwork}\index{Network@{Network}}
+
+
+{\ttfamily \#include $<$Network.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNetwork_a1fd131d94b88f3b8c69040a3b7ccf770}{Network}} (int taille\+De\+Hidden, int output\+Dim)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_a42991321ec7cd3f9a4e92c063dd696c5}{training}} (\mbox{\hyperlink{classMatrix}{Matrix}} Train\+XSet, \mbox{\hyperlink{classMatrix}{Matrix}} Train\+YSet, double Learning\+Rate, int Taille\+Lot)
+\begin{DoxyCompactList}\small\item\em Entrainement du reseau. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_ad3e6c7b45ba199ab804720590e49a50b}{set\+\_\+layer}} (\mbox{\hyperlink{classLayer}{Layer}} L)
+\begin{DoxyCompactList}\small\item\em Mettre a jour une couche. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_ae896b1e9e6902866b00d2b2ec53816d6}{test}} (\mbox{\hyperlink{classMatrix}{Matrix}} Test\+XSet, \mbox{\hyperlink{classMatrix}{Matrix}} Test\+YSet)
+\begin{DoxyCompactList}\small\item\em Test du reseau. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_acccb91b3d4ed22bfa5bbdd51f989f99e}{forward\+\_\+propagation}} (\mbox{\hyperlink{classMatrix}{Matrix}} Train\+XSet)
+\begin{DoxyCompactList}\small\item\em Affiche la valeur de sortie de chaque neurone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_ad018ce8c85aae18d62eae5ffedf10c5f}{backward\+\_\+propagation}} (\mbox{\hyperlink{classMatrix}{Matrix}} Train\+XSet)
+\begin{DoxyCompactList}\small\item\em Afficher l’erreur au niveau de chaque couche. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_ab02f03349f696d59c8971200cb1639b9}{update\+\_\+poids}} (double learning\+Rate)
+\begin{DoxyCompactList}\small\item\em Mise a jour de la valeur des poids (prend en parametre une vitesse d apprentissage) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_afb524590b292b1e4788f103ec2bf7f63}{display\+\_\+result}} ()
+\begin{DoxyCompactList}\small\item\em Observer la sortie du reseau. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_a91c8c227d72c962d00c4c984651cd021}{calcul\+\_\+fiabilite}} ()
+\begin{DoxyCompactList}\small\item\em Connaitre la fiabilite du reseau. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNetwork_a7a4e19cdb4bf0c7ecf82baa643831492}{$\sim$\+Network}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Network_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{Network_8hpp_source}{Network.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classNetwork_a1fd131d94b88f3b8c69040a3b7ccf770}\label{classNetwork_a1fd131d94b88f3b8c69040a3b7ccf770} 
+\index{Network@{Network}!Network@{Network}}
+\index{Network@{Network}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{Network()}{Network()}}
+{\footnotesize\ttfamily Network\+::\+Network (\begin{DoxyParamCaption}\item[{int}]{taille\+De\+Hidden,  }\item[{int}]{output\+Dim }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+
+
+Definition at line \mbox{\hyperlink{Network_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{Network_8cpp_source}{Network.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classNetwork_a7a4e19cdb4bf0c7ecf82baa643831492}\label{classNetwork_a7a4e19cdb4bf0c7ecf82baa643831492} 
+\index{Network@{Network}!````~Network@{$\sim$Network}}
+\index{````~Network@{$\sim$Network}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{$\sim$Network()}{~Network()}}
+{\footnotesize\ttfamily Network\+::$\sim$\+Network (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classNetwork_ad018ce8c85aae18d62eae5ffedf10c5f}\label{classNetwork_ad018ce8c85aae18d62eae5ffedf10c5f} 
+\index{Network@{Network}!backward\_propagation@{backward\_propagation}}
+\index{backward\_propagation@{backward\_propagation}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{backward\_propagation()}{backward\_propagation()}}
+{\footnotesize\ttfamily void Network\+::backward\+\_\+propagation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{Train\+XSet }\end{DoxyParamCaption})}
+
+
+
+Afficher l’erreur au niveau de chaque couche. 
+
+
+
+Definition at line \mbox{\hyperlink{Network_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{Network_8cpp_source}{Network.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classNetwork_a91c8c227d72c962d00c4c984651cd021}\label{classNetwork_a91c8c227d72c962d00c4c984651cd021} 
+\index{Network@{Network}!calcul\_fiabilite@{calcul\_fiabilite}}
+\index{calcul\_fiabilite@{calcul\_fiabilite}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{calcul\_fiabilite()}{calcul\_fiabilite()}}
+{\footnotesize\ttfamily void Network\+::calcul\+\_\+fiabilite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Connaitre la fiabilite du reseau. 
+
+
+
+Definition at line \mbox{\hyperlink{Network_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{Network_8cpp_source}{Network.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classNetwork_afb524590b292b1e4788f103ec2bf7f63}\label{classNetwork_afb524590b292b1e4788f103ec2bf7f63} 
+\index{Network@{Network}!display\_result@{display\_result}}
+\index{display\_result@{display\_result}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{display\_result()}{display\_result()}}
+{\footnotesize\ttfamily void Network\+::display\+\_\+result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Observer la sortie du reseau. 
+
+
+
+Definition at line \mbox{\hyperlink{Network_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{Network_8cpp_source}{Network.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classNetwork_acccb91b3d4ed22bfa5bbdd51f989f99e}\label{classNetwork_acccb91b3d4ed22bfa5bbdd51f989f99e} 
+\index{Network@{Network}!forward\_propagation@{forward\_propagation}}
+\index{forward\_propagation@{forward\_propagation}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{forward\_propagation()}{forward\_propagation()}}
+{\footnotesize\ttfamily void Network\+::forward\+\_\+propagation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{Train\+XSet }\end{DoxyParamCaption})}
+
+
+
+Affiche la valeur de sortie de chaque neurone. 
+
+
+
+Definition at line \mbox{\hyperlink{Network_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{Network_8cpp_source}{Network.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classNetwork_ad3e6c7b45ba199ab804720590e49a50b}\label{classNetwork_ad3e6c7b45ba199ab804720590e49a50b} 
+\index{Network@{Network}!set\_layer@{set\_layer}}
+\index{set\_layer@{set\_layer}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{set\_layer()}{set\_layer()}}
+{\footnotesize\ttfamily void Network\+::set\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLayer}{Layer}}}]{L }\end{DoxyParamCaption})}
+
+
+
+Mettre a jour une couche. 
+
+
+
+Definition at line \mbox{\hyperlink{Network_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{Network_8cpp_source}{Network.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classNetwork_ae896b1e9e6902866b00d2b2ec53816d6}\label{classNetwork_ae896b1e9e6902866b00d2b2ec53816d6} 
+\index{Network@{Network}!test@{test}}
+\index{test@{test}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{test()}{test()}}
+{\footnotesize\ttfamily void Network\+::test (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{Test\+XSet,  }\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{Test\+YSet }\end{DoxyParamCaption})}
+
+
+
+Test du reseau. 
+
+
+
+Definition at line \mbox{\hyperlink{Network_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{Network_8cpp_source}{Network.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classNetwork_a42991321ec7cd3f9a4e92c063dd696c5}\label{classNetwork_a42991321ec7cd3f9a4e92c063dd696c5} 
+\index{Network@{Network}!training@{training}}
+\index{training@{training}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{training()}{training()}}
+{\footnotesize\ttfamily void Network\+::training (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{Train\+XSet,  }\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{Train\+YSet,  }\item[{double}]{Learning\+Rate,  }\item[{int}]{Taille\+Lot }\end{DoxyParamCaption})}
+
+
+
+Entrainement du reseau. 
+
+
+
+Definition at line \mbox{\hyperlink{Network_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{Network_8cpp_source}{Network.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classNetwork_ab02f03349f696d59c8971200cb1639b9}\label{classNetwork_ab02f03349f696d59c8971200cb1639b9} 
+\index{Network@{Network}!update\_poids@{update\_poids}}
+\index{update\_poids@{update\_poids}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{update\_poids()}{update\_poids()}}
+{\footnotesize\ttfamily void Network\+::update\+\_\+poids (\begin{DoxyParamCaption}\item[{double}]{learning\+Rate }\end{DoxyParamCaption})}
+
+
+
+Mise a jour de la valeur des poids (prend en parametre une vitesse d apprentissage) 
+
+
+
+Definition at line \mbox{\hyperlink{Network_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{Network_8cpp_source}{Network.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Network_8hpp}{Network.\+hpp}}\item 
+\mbox{\hyperlink{Network_8cpp}{Network.\+cpp}}\end{DoxyCompactItemize}

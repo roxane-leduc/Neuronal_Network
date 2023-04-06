@@ -1,0 +1,32 @@
+\hypertarget{OutputLayer_8hpp_source}{}\doxysection{Output\+Layer.\+hpp}
+\mbox{\hyperlink{OutputLayer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ \_\_OUTPUTLAYER\_HPP\_\_}}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#define\ \_\_OUTPUTLAYER\_HPP\_\_}}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Layer_8hpp}{Layer.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{TrainingFunction_8hpp}{TrainingFunction.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00008}00008\ \textcolor{keyword}{using\ }std::vector;}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00010}\mbox{\hyperlink{classOutputLayer}{00010}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classOutputLayer}{OutputLayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classLayer}{Layer}}}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00012}00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordtype}{int}\ result;}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00015}00015\ \ \ \ \ vector<double>\ Proba;}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordtype}{int}\ tailleInput;}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{int}\ tailleOutput;}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00019}00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{classOutputLayer_a65757bdb7320aa070ba901ea36a46663}{OutputLayer}}();}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOutputLayer_a835e1becc289ec897b918ff8111b84b5}{creer\_derniere\_couche}}(\textcolor{keywordtype}{int}\ tailleInput,\ \textcolor{keywordtype}{int}\ tailleOutput,\ \mbox{\hyperlink{classTrainingFunction}{TrainingFunction}}\ f);}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOutputLayer_aadc08b1a1b309138cfeeeb9f7656355b}{fonction\_de\_perte}}();}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOutputLayer_af5aa08a41c7aa9d79a803e98162efa9b}{enregistrer\_vecteur\_de\_probabilite}}(\mbox{\hyperlink{classLayer}{Layer}}\ L);}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOutputLayer_ae84763e52893ba54372cae9f77844a92}{obtenir\_resultat}}();}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{classOutputLayer_a190a4a6e21f0f0181b2681bbbd8ed55a}{\string~OutputLayer}}();}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00031}00031\ \};}
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{OutputLayer_8hpp_source_l00033}00033\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

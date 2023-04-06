@@ -1,0 +1,303 @@
+\hypertarget{classMatrix}{}\doxysection{Matrix Class Reference}
+\label{classMatrix}\index{Matrix@{Matrix}}
+
+
+{\ttfamily \#include $<$Matrix.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMatrix_ab2004f39484098b498200ae87bd5527a}{Matrix}} (int choix\+Initialisation)
+\begin{DoxyCompactList}\small\item\em Constructeur (le parametre fait reference a la methode d initialisation de la matrice) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMatrix_ac2cb2235fd6f1978c12ae6d35c4a1b24}{affichage}} ()
+\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \mbox{\hyperlink{classMatrix_a418eb5c471520edd8afafa452851fbdc}{creer\+Gaussien}} (int taille)
+\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \mbox{\hyperlink{classMatrix_abfd7506be536ebf63be4fa1e9526c6c8}{creer\+Uniforme}} (int taille)
+\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \mbox{\hyperlink{classMatrix_a23dd76ab1e3fa75ba68bae8cb2884532}{addition}} (\mbox{\hyperlink{classMatrix}{Matrix}} A, \mbox{\hyperlink{classMatrix}{Matrix}} B)
+\begin{DoxyCompactList}\small\item\em Operations elementaires. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \mbox{\hyperlink{classMatrix_af5d41d5352a28a6796a05fb9dfe649af}{multiplication}} (\mbox{\hyperlink{classMatrix}{Matrix}} A, \mbox{\hyperlink{classMatrix}{Matrix}} B)
+\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \mbox{\hyperlink{classMatrix_a13b2f6d186130b04291f31e24e8ed530}{transposition}} (\mbox{\hyperlink{classMatrix}{Matrix}} A)
+\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \mbox{\hyperlink{classMatrix_a107d46747a1f136b1963659e99722d39}{cst\+Mult\+Mat}} (double c, \mbox{\hyperlink{classMatrix}{Matrix}} A)
+\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \mbox{\hyperlink{classMatrix_a4487c5255aabbe21e24d70d4395a27c7}{vecteur\+Mult\+VecteurT}} (Vecteur A, Vecteur B)
+\item 
+double \mbox{\hyperlink{classMatrix_a750481d8df25eacee6ddc9a2d3db5421}{vecteur\+Dot}} (Vecteur A, Vecteur B)
+\item 
+int \mbox{\hyperlink{classMatrix_aa2dd0886c13d8a1bfa662b0c001c8759}{element\+Grand}} (Veteur proba)
+\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \mbox{\hyperlink{classMatrix_a0beefdc50825b9b4cd3573aeb913dcfb}{ajouter\+Ligne}} (\mbox{\hyperlink{classMatrix}{Matrix}} A)
+\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \mbox{\hyperlink{classMatrix_af45a8375c8324f289829cd78a21dd71b}{ajouter\+Colonne}} (\mbox{\hyperlink{classMatrix}{Matrix}} A)
+\item 
+\mbox{\hyperlink{classMatrix_a9b1c3627f573d78a2f08623fdfef990f}{$\sim$\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Matrix_8hpp_source_l00007}{7}} of file \mbox{\hyperlink{Matrix_8hpp_source}{Matrix.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMatrix_ab2004f39484098b498200ae87bd5527a}\label{classMatrix_ab2004f39484098b498200ae87bd5527a} 
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}}
+{\footnotesize\ttfamily Matrix\+::\+Matrix (\begin{DoxyParamCaption}\item[{int}]{choix\+Initialisation }\end{DoxyParamCaption})}
+
+
+
+Constructeur (le parametre fait reference a la methode d initialisation de la matrice) 
+
+
+
+Definition at line \mbox{\hyperlink{Matrix_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{Matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMatrix_a9b1c3627f573d78a2f08623fdfef990f}\label{classMatrix_a9b1c3627f573d78a2f08623fdfef990f} 
+\index{Matrix@{Matrix}!````~Matrix@{$\sim$Matrix}}
+\index{````~Matrix@{$\sim$Matrix}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{$\sim$Matrix()}{~Matrix()}}
+{\footnotesize\ttfamily Matrix\+::$\sim$\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur. 
+
+
+
+Definition at line \mbox{\hyperlink{Matrix_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{Matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \{}
+\DoxyCodeLine{00068\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMatrix_a23dd76ab1e3fa75ba68bae8cb2884532}\label{classMatrix_a23dd76ab1e3fa75ba68bae8cb2884532} 
+\index{Matrix@{Matrix}!addition@{addition}}
+\index{addition@{addition}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{addition()}{addition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix}{Matrix}} Matrix\+::addition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{A,  }\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{B }\end{DoxyParamCaption})}
+
+
+
+Operations elementaires. 
+
+
+
+Definition at line \mbox{\hyperlink{Matrix_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{Matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMatrix}{Matrix}}();}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMatrix_ac2cb2235fd6f1978c12ae6d35c4a1b24}\label{classMatrix_ac2cb2235fd6f1978c12ae6d35c4a1b24} 
+\index{Matrix@{Matrix}!affichage@{affichage}}
+\index{affichage@{affichage}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{affichage()}{affichage()}}
+{\footnotesize\ttfamily void Matrix\+::affichage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Matrix_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{Matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMatrix_af45a8375c8324f289829cd78a21dd71b}\label{classMatrix_af45a8375c8324f289829cd78a21dd71b} 
+\index{Matrix@{Matrix}!ajouterColonne@{ajouterColonne}}
+\index{ajouterColonne@{ajouterColonne}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{ajouterColonne()}{ajouterColonne()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix}{Matrix}} Matrix\+::ajouter\+Colonne (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{A }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Matrix_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{Matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMatrix}{Matrix}}();}
+\DoxyCodeLine{00064\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMatrix_a0beefdc50825b9b4cd3573aeb913dcfb}\label{classMatrix_a0beefdc50825b9b4cd3573aeb913dcfb} 
+\index{Matrix@{Matrix}!ajouterLigne@{ajouterLigne}}
+\index{ajouterLigne@{ajouterLigne}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{ajouterLigne()}{ajouterLigne()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix}{Matrix}} Matrix\+::ajouter\+Ligne (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{A }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Matrix_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{Matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMatrix}{Matrix}}();}
+\DoxyCodeLine{00059\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMatrix_a418eb5c471520edd8afafa452851fbdc}\label{classMatrix_a418eb5c471520edd8afafa452851fbdc} 
+\index{Matrix@{Matrix}!creerGaussien@{creerGaussien}}
+\index{creerGaussien@{creerGaussien}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{creerGaussien()}{creerGaussien()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix}{Matrix}} Matrix\+::creer\+Gaussien (\begin{DoxyParamCaption}\item[{int}]{taille }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Matrix_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{Matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMatrix}{Matrix}}();}
+\DoxyCodeLine{00014\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMatrix_abfd7506be536ebf63be4fa1e9526c6c8}\label{classMatrix_abfd7506be536ebf63be4fa1e9526c6c8} 
+\index{Matrix@{Matrix}!creerUniforme@{creerUniforme}}
+\index{creerUniforme@{creerUniforme}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{creerUniforme()}{creerUniforme()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix}{Matrix}} Matrix\+::creer\+Uniforme (\begin{DoxyParamCaption}\item[{int}]{taille }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Matrix_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{Matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMatrix}{Matrix}}();}
+\DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMatrix_a107d46747a1f136b1963659e99722d39}\label{classMatrix_a107d46747a1f136b1963659e99722d39} 
+\index{Matrix@{Matrix}!cstMultMat@{cstMultMat}}
+\index{cstMultMat@{cstMultMat}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{cstMultMat()}{cstMultMat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix}{Matrix}} Matrix\+::cst\+Mult\+Mat (\begin{DoxyParamCaption}\item[{double}]{c,  }\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{A }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Matrix_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{Matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMatrix}{Matrix}}();}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMatrix_aa2dd0886c13d8a1bfa662b0c001c8759}\label{classMatrix_aa2dd0886c13d8a1bfa662b0c001c8759} 
+\index{Matrix@{Matrix}!elementGrand@{elementGrand}}
+\index{elementGrand@{elementGrand}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{elementGrand()}{elementGrand()}}
+{\footnotesize\ttfamily int Matrix\+::element\+Grand (\begin{DoxyParamCaption}\item[{Veteur}]{proba }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Matrix_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{Matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00054\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMatrix_af5d41d5352a28a6796a05fb9dfe649af}\label{classMatrix_af5d41d5352a28a6796a05fb9dfe649af} 
+\index{Matrix@{Matrix}!multiplication@{multiplication}}
+\index{multiplication@{multiplication}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{multiplication()}{multiplication()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix}{Matrix}} Matrix\+::multiplication (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{A,  }\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{B }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Matrix_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{Matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMatrix}{Matrix}}();}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMatrix_a13b2f6d186130b04291f31e24e8ed530}\label{classMatrix_a13b2f6d186130b04291f31e24e8ed530} 
+\index{Matrix@{Matrix}!transposition@{transposition}}
+\index{transposition@{transposition}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{transposition()}{transposition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix}{Matrix}} Matrix\+::transposition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{A }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Matrix_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{Matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMatrix}{Matrix}}();}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMatrix_a750481d8df25eacee6ddc9a2d3db5421}\label{classMatrix_a750481d8df25eacee6ddc9a2d3db5421} 
+\index{Matrix@{Matrix}!vecteurDot@{vecteurDot}}
+\index{vecteurDot@{vecteurDot}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{vecteurDot()}{vecteurDot()}}
+{\footnotesize\ttfamily double Matrix\+::vecteur\+Dot (\begin{DoxyParamCaption}\item[{Vecteur}]{A,  }\item[{Vecteur}]{B }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Matrix_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{Matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{return}\ 0.0;}
+\DoxyCodeLine{00049\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMatrix_a4487c5255aabbe21e24d70d4395a27c7}\label{classMatrix_a4487c5255aabbe21e24d70d4395a27c7} 
+\index{Matrix@{Matrix}!vecteurMultVecteurT@{vecteurMultVecteurT}}
+\index{vecteurMultVecteurT@{vecteurMultVecteurT}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{vecteurMultVecteurT()}{vecteurMultVecteurT()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix}{Matrix}} Matrix\+::vecteur\+Mult\+VecteurT (\begin{DoxyParamCaption}\item[{Vecteur}]{A,  }\item[{Vecteur}]{B }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Matrix_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{Matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMatrix}{Matrix}}();}
+\DoxyCodeLine{00044\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Matrix_8hpp}{Matrix.\+hpp}}\item 
+\mbox{\hyperlink{Matrix_8cpp}{Matrix.\+cpp}}\end{DoxyCompactItemize}

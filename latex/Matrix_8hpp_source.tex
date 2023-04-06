@@ -1,0 +1,36 @@
+\hypertarget{Matrix_8hpp_source}{}\doxysection{Matrix.\+hpp}
+\mbox{\hyperlink{Matrix_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ \_\_MATRIX\_HPP\_\_}}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#define\ \_\_MATRIX\_HPP\_\_}}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00005}00005\ \textcolor{keyword}{using\ }std::vector;}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00007}\mbox{\hyperlink{classMatrix}{00007}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMatrix}{Matrix}}}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00009}00009\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00010}00010\ \ \ \ \ \textcolor{keywordtype}{int}\ nbColumns;}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordtype}{int}\ nbRows;}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00012}00012\ \ \ \ \ vector<vector<double>>\ weight;}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00014}00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{classMatrix}{Matrix}}(\textcolor{keywordtype}{int}\ choixInitialisation);}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMatrix_ac2cb2235fd6f1978c12ae6d35c4a1b24}{affichage}}();}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{classMatrix}{Matrix}}\ \mbox{\hyperlink{classMatrix_a418eb5c471520edd8afafa452851fbdc}{creerGaussien}}(\textcolor{keywordtype}{int}\ taille);}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{classMatrix}{Matrix}}\ \mbox{\hyperlink{classMatrix_abfd7506be536ebf63be4fa1e9526c6c8}{creerUniforme}}(\textcolor{keywordtype}{int}\ taille);}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{classMatrix}{Matrix}}\ \mbox{\hyperlink{classMatrix_a23dd76ab1e3fa75ba68bae8cb2884532}{addition}}(\mbox{\hyperlink{classMatrix}{Matrix}}\ A,\ \mbox{\hyperlink{classMatrix}{Matrix}}\ B);}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{classMatrix}{Matrix}}\ \mbox{\hyperlink{classMatrix_af5d41d5352a28a6796a05fb9dfe649af}{multiplication}}(\mbox{\hyperlink{classMatrix}{Matrix}}\ A,\ \mbox{\hyperlink{classMatrix}{Matrix}}\ B);}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{classMatrix}{Matrix}}\ \mbox{\hyperlink{classMatrix_a13b2f6d186130b04291f31e24e8ed530}{transposition}}(\mbox{\hyperlink{classMatrix}{Matrix}}\ A);}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{classMatrix}{Matrix}}\ \mbox{\hyperlink{classMatrix_a107d46747a1f136b1963659e99722d39}{cstMultMat}}(\textcolor{keywordtype}{double}\ c,\ \mbox{\hyperlink{classMatrix}{Matrix}}\ A);}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{classMatrix}{Matrix}}\ \mbox{\hyperlink{classMatrix_a4487c5255aabbe21e24d70d4395a27c7}{vecteurMultVecteurT}}(Vecteur\ A,\ Vecteur\ B);}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classMatrix_a750481d8df25eacee6ddc9a2d3db5421}{vecteurDot}}(Vecteur\ A,\ Vecteur\ B);}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMatrix_aa2dd0886c13d8a1bfa662b0c001c8759}{elementGrand}}(Veteur\ proba);}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{classMatrix}{Matrix}}\ \mbox{\hyperlink{classMatrix_a0beefdc50825b9b4cd3573aeb913dcfb}{ajouterLigne}}(\mbox{\hyperlink{classMatrix}{Matrix}}\ A);}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{classMatrix}{Matrix}}\ \mbox{\hyperlink{classMatrix_af45a8375c8324f289829cd78a21dd71b}{ajouterColonne}}(\mbox{\hyperlink{classMatrix}{Matrix}}\ A);}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{classMatrix_a9b1c3627f573d78a2f08623fdfef990f}{\string~Matrix}}();}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00032}00032\ \};}
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{Matrix_8hpp_source_l00034}00034\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

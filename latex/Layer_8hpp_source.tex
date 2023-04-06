@@ -1,0 +1,33 @@
+\hypertarget{Layer_8hpp_source}{}\doxysection{Layer.\+hpp}
+\mbox{\hyperlink{Layer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ \_\_LAYER\_HPP\_\_}}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#define\ \_\_LAYER\_HPP\_\_}}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Matrix_8hpp}{Matrix.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Neurone_8hpp}{Neurone.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00008}00008\ \textcolor{keyword}{using\ }std::list;}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00010}\mbox{\hyperlink{classLayer}{00010}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classLayer}{Layer}}}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00012}00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00013}00013\ \ \ \ \ list<Neurone>\ neurones;}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordtype}{int}\ nbNeurone;}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{classMatrix}{Matrix}}\ arete;}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{classMatrix}{Matrix}}\ delta;}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{double}\ fonctionActivation;}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00022}00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{classLayer_a8f623c7c4737dc29ecc86978d243ac6f}{Layer}}();}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLayer_a5b1da712787d6e7f9df44ea6b027c389}{activation}}(\mbox{\hyperlink{classLayer}{Layer}}\ L);}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLayer_a35ab57a40db0358848628b49a3abc928}{calculerDelta}}(\mbox{\hyperlink{classLayer}{Layer}}\ L);}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLayer_aceeaa666c3fefed3af0e0fed1f63c438}{displayWeight}}(\mbox{\hyperlink{classMatrix}{Matrix}}\ weight);}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLayer_aafd1bba27b411b3433d418d6962e5cab}{affichage}}();}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{classLayer_a1b1ba4804451dfe6cc357194e42762ae}{\string~Layer}}();}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00032}00032\ \};}
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{Layer_8hpp_source_l00034}00034\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

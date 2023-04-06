@@ -1,0 +1,38 @@
+\hypertarget{Network_8hpp_source}{}\doxysection{Network.\+hpp}
+\mbox{\hyperlink{Network_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ \_\_NETWORK\_HPP\_\_}}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#define\ \_\_NETWORK\_HPP\_\_}}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Layer_8hpp}{Layer.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{HiddenLayer_8hpp}{HiddenLayer.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Matrix_8hpp}{Matrix.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00009}00009\ \textcolor{keyword}{using\ }std::list;}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00011}\mbox{\hyperlink{classNetwork}{00011}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classNetwork}{Network}}}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00013}00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordtype}{int}\ nbHiddenLayer;}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{double}\ fiabilite;}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{classLayer}{Layer}}\ inputLayer;}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{classLayer}{Layer}}\ outputLayer;}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00020}00020\ \ \ \ \ list<HiddenLayer>\ hidden;}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00022}00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{classNetwork}{Network}}(\textcolor{keywordtype}{int}\ tailleDeHidden,\ \textcolor{keywordtype}{int}\ outputDim);}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetwork_a42991321ec7cd3f9a4e92c063dd696c5}{training}}(\mbox{\hyperlink{classMatrix}{Matrix}}\ TrainXSet,\ \mbox{\hyperlink{classMatrix}{Matrix}}\ TrainYSet,\ \textcolor{keywordtype}{double}\ LearningRate,\ \textcolor{keywordtype}{int}\ TailleLot);}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetwork_ad3e6c7b45ba199ab804720590e49a50b}{set\_layer}}(\mbox{\hyperlink{classLayer}{Layer}}\ L);}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetwork_ae896b1e9e6902866b00d2b2ec53816d6}{test}}(\mbox{\hyperlink{classMatrix}{Matrix}}\ TestXSet,\ \mbox{\hyperlink{classMatrix}{Matrix}}\ TestYSet);}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetwork_acccb91b3d4ed22bfa5bbdd51f989f99e}{forward\_propagation}}(\mbox{\hyperlink{classMatrix}{Matrix}}\ TrainXSet);}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetwork_ad018ce8c85aae18d62eae5ffedf10c5f}{backward\_propagation}}(\mbox{\hyperlink{classMatrix}{Matrix}}\ TrainXSet);}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetwork_ab02f03349f696d59c8971200cb1639b9}{update\_poids}}(\textcolor{keywordtype}{double}\ learningRate);}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetwork_afb524590b292b1e4788f103ec2bf7f63}{display\_result}}();}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetwork_a91c8c227d72c962d00c4c984651cd021}{calcul\_fiabilite}}();}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00042}\mbox{\hyperlink{classNetwork_a7a4e19cdb4bf0c7ecf82baa643831492}{00042}}\ \ \ \ \ \mbox{\hyperlink{classNetwork_a7a4e19cdb4bf0c7ecf82baa643831492}{\string~Network}}();}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{Network_8hpp_source_l00045}00045\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,186 @@
+\hypertarget{classTrainingFunction}{}\doxysection{Training\+Function Class Reference}
+\label{classTrainingFunction}\index{TrainingFunction@{TrainingFunction}}
+
+
+{\ttfamily \#include $<$Training\+Function.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTrainingFunction_ad58bfee76c08763f4be5f16f55d6d9fd}{Training\+Function}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur (comporte les principales fonctions d activation ainsi que leurs derivees) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classTrainingFunction_a21413a3b62b08a79d7a8ec9fcf121752}{sigmoide}} ()
+\item 
+float \mbox{\hyperlink{classTrainingFunction_a6401497fd882c13a6d05f538689a5203}{re\+Lu}} ()
+\item 
+float \mbox{\hyperlink{classTrainingFunction_abcaaa5081bff262da398c4fa6148e97f}{soft\+Max}} ()
+\item 
+float \mbox{\hyperlink{classTrainingFunction_a42b20407bea28d56c9c3b98b9602fb4f}{derivee\+Sigmoide}} ()
+\item 
+float \mbox{\hyperlink{classTrainingFunction_a5a6f9ee79d1ec1c889c8624aa8b0e769}{derivee\+Relu}} ()
+\item 
+float \mbox{\hyperlink{classTrainingFunction_a55e856abf9a02f63736bae349a75d029}{derivee\+Softmax}} ()
+\item 
+\mbox{\hyperlink{classTrainingFunction_a11014279786f7f480397a06c73722a88}{$\sim$\+Training\+Function}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{TrainingFunction_8hpp_source_l00004}{4}} of file \mbox{\hyperlink{TrainingFunction_8hpp_source}{Training\+Function.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classTrainingFunction_ad58bfee76c08763f4be5f16f55d6d9fd}\label{classTrainingFunction_ad58bfee76c08763f4be5f16f55d6d9fd} 
+\index{TrainingFunction@{TrainingFunction}!TrainingFunction@{TrainingFunction}}
+\index{TrainingFunction@{TrainingFunction}!TrainingFunction@{TrainingFunction}}
+\doxysubsubsection{\texorpdfstring{TrainingFunction()}{TrainingFunction()}}
+{\footnotesize\ttfamily Training\+Function\+::\+Training\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur (comporte les principales fonctions d activation ainsi que leurs derivees) 
+
+
+
+Definition at line \mbox{\hyperlink{TrainingFunction_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{TrainingFunction_8cpp_source}{Training\+Function.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classTrainingFunction_a11014279786f7f480397a06c73722a88}\label{classTrainingFunction_a11014279786f7f480397a06c73722a88} 
+\index{TrainingFunction@{TrainingFunction}!````~TrainingFunction@{$\sim$TrainingFunction}}
+\index{````~TrainingFunction@{$\sim$TrainingFunction}!TrainingFunction@{TrainingFunction}}
+\doxysubsubsection{\texorpdfstring{$\sim$TrainingFunction()}{~TrainingFunction()}}
+{\footnotesize\ttfamily Training\+Function\+::$\sim$\+Training\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur. 
+
+
+
+Definition at line \mbox{\hyperlink{TrainingFunction_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{TrainingFunction_8cpp_source}{Training\+Function.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTrainingFunction_a5a6f9ee79d1ec1c889c8624aa8b0e769}\label{classTrainingFunction_a5a6f9ee79d1ec1c889c8624aa8b0e769} 
+\index{TrainingFunction@{TrainingFunction}!deriveeRelu@{deriveeRelu}}
+\index{deriveeRelu@{deriveeRelu}!TrainingFunction@{TrainingFunction}}
+\doxysubsubsection{\texorpdfstring{deriveeRelu()}{deriveeRelu()}}
+{\footnotesize\ttfamily float Training\+Function\+::derivee\+Relu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{TrainingFunction_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{TrainingFunction_8cpp_source}{Training\+Function.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{return}\ 0.0f;}
+\DoxyCodeLine{00030\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classTrainingFunction_a42b20407bea28d56c9c3b98b9602fb4f}\label{classTrainingFunction_a42b20407bea28d56c9c3b98b9602fb4f} 
+\index{TrainingFunction@{TrainingFunction}!deriveeSigmoide@{deriveeSigmoide}}
+\index{deriveeSigmoide@{deriveeSigmoide}!TrainingFunction@{TrainingFunction}}
+\doxysubsubsection{\texorpdfstring{deriveeSigmoide()}{deriveeSigmoide()}}
+{\footnotesize\ttfamily float Training\+Function\+::derivee\+Sigmoide (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{TrainingFunction_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{TrainingFunction_8cpp_source}{Training\+Function.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{return}\ 0.0f;}
+\DoxyCodeLine{00025\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classTrainingFunction_a55e856abf9a02f63736bae349a75d029}\label{classTrainingFunction_a55e856abf9a02f63736bae349a75d029} 
+\index{TrainingFunction@{TrainingFunction}!deriveeSoftmax@{deriveeSoftmax}}
+\index{deriveeSoftmax@{deriveeSoftmax}!TrainingFunction@{TrainingFunction}}
+\doxysubsubsection{\texorpdfstring{deriveeSoftmax()}{deriveeSoftmax()}}
+{\footnotesize\ttfamily float Training\+Function\+::derivee\+Softmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{TrainingFunction_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{TrainingFunction_8cpp_source}{Training\+Function.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{return}\ 0.0f;}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classTrainingFunction_a6401497fd882c13a6d05f538689a5203}\label{classTrainingFunction_a6401497fd882c13a6d05f538689a5203} 
+\index{TrainingFunction@{TrainingFunction}!reLu@{reLu}}
+\index{reLu@{reLu}!TrainingFunction@{TrainingFunction}}
+\doxysubsubsection{\texorpdfstring{reLu()}{reLu()}}
+{\footnotesize\ttfamily float Training\+Function\+::re\+Lu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{TrainingFunction_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{TrainingFunction_8cpp_source}{Training\+Function.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{return}\ 0.0f;}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classTrainingFunction_a21413a3b62b08a79d7a8ec9fcf121752}\label{classTrainingFunction_a21413a3b62b08a79d7a8ec9fcf121752} 
+\index{TrainingFunction@{TrainingFunction}!sigmoide@{sigmoide}}
+\index{sigmoide@{sigmoide}!TrainingFunction@{TrainingFunction}}
+\doxysubsubsection{\texorpdfstring{sigmoide()}{sigmoide()}}
+{\footnotesize\ttfamily float Training\+Function\+::sigmoide (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{TrainingFunction_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{TrainingFunction_8cpp_source}{Training\+Function.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordflow}{return}\ 0.0f;}
+\DoxyCodeLine{00010\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classTrainingFunction_abcaaa5081bff262da398c4fa6148e97f}\label{classTrainingFunction_abcaaa5081bff262da398c4fa6148e97f} 
+\index{TrainingFunction@{TrainingFunction}!softMax@{softMax}}
+\index{softMax@{softMax}!TrainingFunction@{TrainingFunction}}
+\doxysubsubsection{\texorpdfstring{softMax()}{softMax()}}
+{\footnotesize\ttfamily float Training\+Function\+::soft\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+La couche de sortie aura une seule fonction d apprentissage possible qui sera la fonction soft\+Max et qui correspondra aussi a la fonction de perte 
+
+Definition at line \mbox{\hyperlink{TrainingFunction_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{TrainingFunction_8cpp_source}{Training\+Function.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{return}\ 0.0f;}
+\DoxyCodeLine{00020\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{TrainingFunction_8hpp}{Training\+Function.\+hpp}}\item 
+\mbox{\hyperlink{TrainingFunction_8cpp}{Training\+Function.\+cpp}}\end{DoxyCompactItemize}

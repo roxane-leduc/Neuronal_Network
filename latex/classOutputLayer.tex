@@ -1,0 +1,177 @@
+\hypertarget{classOutputLayer}{}\doxysection{Output\+Layer Class Reference}
+\label{classOutputLayer}\index{OutputLayer@{OutputLayer}}
+
+
+{\ttfamily \#include $<$Output\+Layer.\+hpp$>$}
+
+Inheritance diagram for Output\+Layer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classOutputLayer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOutputLayer_a65757bdb7320aa070ba901ea36a46663}{Output\+Layer}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOutputLayer_a835e1becc289ec897b918ff8111b84b5}{creer\+\_\+derniere\+\_\+couche}} (int taille\+Input, int taille\+Output, \mbox{\hyperlink{classTrainingFunction}{Training\+Function}} f)
+\begin{DoxyCompactList}\small\item\em Creer la couche de sortie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOutputLayer_aadc08b1a1b309138cfeeeb9f7656355b}{fonction\+\_\+de\+\_\+perte}} ()
+\begin{DoxyCompactList}\small\item\em Prend en parametre une fonction correspondant a la fontion de perte du reseau, ici, l entropie croise. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOutputLayer_af5aa08a41c7aa9d79a803e98162efa9b}{enregistrer\+\_\+vecteur\+\_\+de\+\_\+probabilite}} (\mbox{\hyperlink{classLayer}{Layer}} L)
+\begin{DoxyCompactList}\small\item\em Enregistre le resultat dans l attribut Proba. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOutputLayer_ae84763e52893ba54372cae9f77844a92}{obtenir\+\_\+resultat}} ()
+\item 
+\mbox{\hyperlink{classOutputLayer_a190a4a6e21f0f0181b2681bbbd8ed55a}{$\sim$\+Output\+Layer}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classLayer}{Layer}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLayer_a8f623c7c4737dc29ecc86978d243ac6f}{Layer}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLayer_a5b1da712787d6e7f9df44ea6b027c389}{activation}} (\mbox{\hyperlink{classLayer}{Layer}} L)
+\item 
+void \mbox{\hyperlink{classLayer_a35ab57a40db0358848628b49a3abc928}{calculer\+Delta}} (\mbox{\hyperlink{classLayer}{Layer}} L)
+\item 
+void \mbox{\hyperlink{classLayer_aceeaa666c3fefed3af0e0fed1f63c438}{display\+Weight}} (\mbox{\hyperlink{classMatrix}{Matrix}} weight)
+\begin{DoxyCompactList}\small\item\em Affiche la matrice des poids. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLayer_aafd1bba27b411b3433d418d6962e5cab}{affichage}} ()
+\item 
+\mbox{\hyperlink{classLayer_a1b1ba4804451dfe6cc357194e42762ae}{$\sim$\+Layer}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{OutputLayer_8hpp_source_l00010}{10}} of file \mbox{\hyperlink{OutputLayer_8hpp_source}{Output\+Layer.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classOutputLayer_a65757bdb7320aa070ba901ea36a46663}\label{classOutputLayer_a65757bdb7320aa070ba901ea36a46663} 
+\index{OutputLayer@{OutputLayer}!OutputLayer@{OutputLayer}}
+\index{OutputLayer@{OutputLayer}!OutputLayer@{OutputLayer}}
+\doxysubsubsection{\texorpdfstring{OutputLayer()}{OutputLayer()}}
+{\footnotesize\ttfamily Output\+Layer\+::\+Output\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+
+
+Definition at line \mbox{\hyperlink{OutputLayer_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{OutputLayer_8cpp_source}{Output\+Layer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classOutputLayer_a190a4a6e21f0f0181b2681bbbd8ed55a}\label{classOutputLayer_a190a4a6e21f0f0181b2681bbbd8ed55a} 
+\index{OutputLayer@{OutputLayer}!````~OutputLayer@{$\sim$OutputLayer}}
+\index{````~OutputLayer@{$\sim$OutputLayer}!OutputLayer@{OutputLayer}}
+\doxysubsubsection{\texorpdfstring{$\sim$OutputLayer()}{~OutputLayer()}}
+{\footnotesize\ttfamily Output\+Layer\+::$\sim$\+Output\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur. 
+
+
+
+Definition at line \mbox{\hyperlink{OutputLayer_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{OutputLayer_8cpp_source}{Output\+Layer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classOutputLayer_a835e1becc289ec897b918ff8111b84b5}\label{classOutputLayer_a835e1becc289ec897b918ff8111b84b5} 
+\index{OutputLayer@{OutputLayer}!creer\_derniere\_couche@{creer\_derniere\_couche}}
+\index{creer\_derniere\_couche@{creer\_derniere\_couche}!OutputLayer@{OutputLayer}}
+\doxysubsubsection{\texorpdfstring{creer\_derniere\_couche()}{creer\_derniere\_couche()}}
+{\footnotesize\ttfamily void Output\+Layer\+::creer\+\_\+derniere\+\_\+couche (\begin{DoxyParamCaption}\item[{int}]{taille\+Input,  }\item[{int}]{taille\+Output,  }\item[{\mbox{\hyperlink{classTrainingFunction}{Training\+Function}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Creer la couche de sortie. 
+
+
+
+Definition at line \mbox{\hyperlink{OutputLayer_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{OutputLayer_8cpp_source}{Output\+Layer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classOutputLayer_af5aa08a41c7aa9d79a803e98162efa9b}\label{classOutputLayer_af5aa08a41c7aa9d79a803e98162efa9b} 
+\index{OutputLayer@{OutputLayer}!enregistrer\_vecteur\_de\_probabilite@{enregistrer\_vecteur\_de\_probabilite}}
+\index{enregistrer\_vecteur\_de\_probabilite@{enregistrer\_vecteur\_de\_probabilite}!OutputLayer@{OutputLayer}}
+\doxysubsubsection{\texorpdfstring{enregistrer\_vecteur\_de\_probabilite()}{enregistrer\_vecteur\_de\_probabilite()}}
+{\footnotesize\ttfamily void Output\+Layer\+::enregistrer\+\_\+vecteur\+\_\+de\+\_\+probabilite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLayer}{Layer}}}]{L }\end{DoxyParamCaption})}
+
+
+
+Enregistre le resultat dans l attribut Proba. 
+
+
+
+Definition at line \mbox{\hyperlink{OutputLayer_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{OutputLayer_8cpp_source}{Output\+Layer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classOutputLayer_aadc08b1a1b309138cfeeeb9f7656355b}\label{classOutputLayer_aadc08b1a1b309138cfeeeb9f7656355b} 
+\index{OutputLayer@{OutputLayer}!fonction\_de\_perte@{fonction\_de\_perte}}
+\index{fonction\_de\_perte@{fonction\_de\_perte}!OutputLayer@{OutputLayer}}
+\doxysubsubsection{\texorpdfstring{fonction\_de\_perte()}{fonction\_de\_perte()}}
+{\footnotesize\ttfamily void Output\+Layer\+::fonction\+\_\+de\+\_\+perte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prend en parametre une fonction correspondant a la fontion de perte du reseau, ici, l entropie croise. 
+
+
+
+Definition at line \mbox{\hyperlink{OutputLayer_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{OutputLayer_8cpp_source}{Output\+Layer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classOutputLayer_ae84763e52893ba54372cae9f77844a92}\label{classOutputLayer_ae84763e52893ba54372cae9f77844a92} 
+\index{OutputLayer@{OutputLayer}!obtenir\_resultat@{obtenir\_resultat}}
+\index{obtenir\_resultat@{obtenir\_resultat}!OutputLayer@{OutputLayer}}
+\doxysubsubsection{\texorpdfstring{obtenir\_resultat()}{obtenir\_resultat()}}
+{\footnotesize\ttfamily void Output\+Layer\+::obtenir\+\_\+resultat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{OutputLayer_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{OutputLayer_8cpp_source}{Output\+Layer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{OutputLayer_8hpp}{Output\+Layer.\+hpp}}\item 
+\mbox{\hyperlink{OutputLayer_8cpp}{Output\+Layer.\+cpp}}\end{DoxyCompactItemize}
