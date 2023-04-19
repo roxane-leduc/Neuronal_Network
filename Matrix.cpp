@@ -527,5 +527,10 @@ int main( int argc, char *argv[], char *envp[] ){
 
     Matrix test4 = test1.transposition();
     test4.affichage();
+    std::cout<<std::endl;
+    
+    Matrix test5 = test1 + test3;
+    test5.affichage();
+    std::cout<<std::endl;
     
 }

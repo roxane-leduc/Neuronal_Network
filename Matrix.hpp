@@ -3,11 +3,14 @@
 
 class Matrix
 {
-public: 
+private : 
     int nbColumns;
     int nbRows;
     double** weight;
 
+
+
+public :
     //! Constructeur (le parametre fait reference a la methode d initialisation de la matrice)
     /**
     @brief Constructeur de la classe, tous les poids de la matrice sont nuls
@@ -39,13 +42,13 @@ public:
 
     /**
     @brief Surcharge de l'opérateur d'addition
-    @param A : la matrice que l'on additionne à droite de la matrice sur laquelle on appelle : @param this + @param A
+    @param A : la matrice que l'on additionne à droite de la matrice sur laquelle on appelle : this + A
     */
     Matrix operator+(const Matrix& A);
 
     /**
     @brief Surcharge de l'opérateur de multiplication
-    @param A : la matrice que l'on multiplie à droite de la matrice sur laquelle on appelle : @param this * @param A
+    @param A : la matrice que l'on multiplie à droite de la matrice sur laquelle on appelle : this * A
     */
     Matrix operator*(const Matrix& A);
 
@@ -105,14 +108,14 @@ public:
 
     //! Modifier les poids pour qu'ils suivent des lois
     /** 
-    @brief Modifier les poids de la matrice pour qu'ils suivent une loi normale ( @param mu , @param stddev )
+    @brief Modifier les poids de la matrice pour qu'ils suivent une loi normale (mu,stddev)
     @param mu : la moyenne de la loi normale 
     @param stddev : l'écart type de la loi normale
     */
     void creerGaussien(double mu,double stddev);
     
     /**
-    @brief Modifier les poids de la matrice pour qu'ils suivent une loi uniforme ( @param a , @param b ) 
+    @brief Modifier les poids de la matrice pour qu'ils suivent une loi uniforme (a,b) 
     @param a : la borne inférieure de l'intervalle
     @param b : la borne supérieure de l'intervalle
     */
@@ -152,23 +155,23 @@ public:
     int elementGrand();
 
     /**
-    @brief Ajouter une ligne vide à la fin de la matrice @param this
+    @brief Ajouter une ligne vide à la fin de la matrice this
     */
     void ajouterLigneVide();
 
     /**
-    @brief Ajouter la ligne @param Ligne en bas de la matrice @param this
+    @brief Ajouter la ligne @param Ligne en bas de la matrice this
     @param Ligne : un vecteur ligne
     */
     void ajouterLigne(const Matrix& Ligne);
 
     /**
-    @brief Ajouter une colonne vide à la fin de la matrice @param this
+    @brief Ajouter une colonne vide à la fin de la matrice this
     */
     void ajouterColonneVide();
 
     /**
-    @brief Ajouter la colonne @param Colonne à droite de la matrice @param this
+    @brief Ajouter la colonne @param Colonne à droite de la matrice this
     @param Colonne : un vecteur colonne
     */
     void ajouterColonne(Matrix Colonne);
