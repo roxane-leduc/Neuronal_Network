@@ -1,7 +1,12 @@
 #include "OutputLayer.hpp"
 
-OutputLayer::OutputLayer()
+//Constructeur
+OutputLayer::OutputLayer(int sizeIn, int sizeOut)
 {
+    tailleInput = sizeIn;
+    tailleOutput = sizeOut;
+    result = -1;
+    Proba = vector<double>(sizeOut,0.0); //vecteur de taille "sizeOut" et qui ne contient que des 0
 }
 
 void OutputLayer::creer_derniere_couche(int tailleInput, int tailleOutput, TrainingFunction f)
@@ -20,6 +25,7 @@ void OutputLayer::obtenir_resultat()
 {
 }
 
+//destructeur
 OutputLayer::~OutputLayer()
 {
 }
