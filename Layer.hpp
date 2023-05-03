@@ -11,22 +11,51 @@ class Layer
 {
 private:
     list<Neurone> neurones;
-    int nbNeurone;
+    //! Nombre de neurones que l'on a en entrée
+    int Nbe;
+    //! Nombre de neurones que l'on a en sortie
+    int Nbs;   
+    void activation(Layer L);
+
     //! Matrice contenant les poids des aretes reliant cette couche a la suivante
     Matrix arete;
+    
     //! Matrice contenant les delta de chaque poids 
     Matrix delta;
-    //! Savoir quelle fonction d activation est utilisee par la couche
-    double fonctionActivation;
+    
+    //! Matrice des entrees
+    Matrix entree;
+    
+    //! Matrice des sorties
+    Matrix sortie;
+    
+    
+    
+    //! Fonction d activation utilisee par la couche
+    double fonctionActivation(double x);
+    
+    //! Getter et Setter
+    
+    //! Setter
+    
+    void setWeights(Matrix<double> s);
+    void setEntree(Matrix<double> e);
+   
+    
+    
+    
 
 public:
     //! Constructeur
     Layer();
-    void activation(Layer L);
+    Layer(int Nbe, int Nbs, Matrix arete, Matrix delta, double fonctionActivation);
+    Layer(int Nbe, int Nbs);
+    
+    //! Calcul de la matrice des deltas
     void calculerDelta(Layer L);
     //! Affiche la matrice des poids
     void displayWeight(Matrix weight);
-    void affichage();
+
     //! Destructeur
     ~Layer();
 };
