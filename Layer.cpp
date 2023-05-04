@@ -18,7 +18,7 @@ Matrix<double>Layer::Sortie() {
 
 // Applique la fonction sigmoide a toutes les neurones en sorties
 
-void NetLayer::activation(Matrix<double> col) {
+void Layer::activation(Matrix<double> col) {
 	for (size_t i = 0; i < col.size(); i++) {
         this->sortie[i][0] = fonctionActivation(col[i][0]);
 	}
@@ -76,10 +76,6 @@ Layer::Layer(int Nbe, int Nbs)
 {
       this.Nbe=Nbe;
       this.Nbs=Nbs;
-}
-
-void Layer::activation(Layer L)
-{
 }
 
 void Layer::calculerDelta(Layer L)
