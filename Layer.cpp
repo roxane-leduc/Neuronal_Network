@@ -3,22 +3,24 @@
 #include <iostream>
 
 
-// Compute the matrix multiplication and apply the sigmoid function to the output
-// The core function of a layer to feed forward input through the network
-Matrix<double> NetLayer::computeOutput() {
+// 	Fonction qui calcule la matrice de sortie
+Matrix<double>Layer::Sortie() {
     // X = W * I
-    this->outputs = this->weights * this->inputs;
-    // Apply sigmoid to output
-    activation(this->outputs);
+    this.sortie = this.arete * this.entree;
+	
+    // Applique la fonction sigmoide a toutes les sorties
+	
+    activation(this.sortie);
     
-    return this->outputs;
+    return this.sortie;
 }
 
 
-// Applies the sigmoid function to every output node of this->outputs
+// Applique la fonction sigmoide a toutes les neurones en sorties
+
 void NetLayer::activation(Matrix<double> col) {
 	for (size_t i = 0; i < col.size(); i++) {
-        this->outputs[i][0] = sigmoid(col[i][0]);
+        this->sortie[i][0] = fonctionActivation(col[i][0]);
 	}
 }
 
