@@ -48,10 +48,15 @@ Layer::Layer()
       this.arete=arete(0,0);    
 }
 
-// remplir la matrice de poids
+
+// Setter
 
  void Layer::setEntree(Matrix<double> e) {
 	this.entree = e;
+    }
+
+ void Layer::setEtiquette(Matrix<double> et) {
+	this.etiq = et;
     }
 
 void Layer::setPoids(Matrix<double> w) {
