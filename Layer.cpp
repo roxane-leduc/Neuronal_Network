@@ -69,6 +69,10 @@ Layer::Layer(int Nbe, int Nbs)
 
 void Layer::calculerDelta(Layer L)
 {
+	double Ij=0;
+	for 
+	
+	//Calcul de la somme pondérées des poids pour le neurone de sortis j
 	
 }
 
