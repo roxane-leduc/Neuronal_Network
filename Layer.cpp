@@ -3,7 +3,7 @@
 #include <iostream>
 
 
-// 	Fonction qui calcule le vecteur de sortie
+// 	Fonction qui calcule la matrice de sortie
 Matrix<double>Layer::Sortie() {
     // X = W * I
     this.sortie = this.arete * this.entree;
@@ -65,14 +65,30 @@ Layer::Layer(int Nbe, int Nbs)
       this.Nbs=Nbs;
 }
 
+// Permet de calculer la matrice des deltas pour la mise a jour des poids
+
 void Layer::calculerDelta(Layer L)
 {
 	
 }
 
-void Layer::displayWeight(Matrix weight)
+// Affiche les poids de la matrice de poids
+
+void Layer::displayWeight(Layer L)
 {
-	
+	std::cout<<"Affichage de la matrice des poids"<<std::endl;
+	for (int i=0;i<L.arete.nbRows;i++)
+	{
+		std::cout<<"Neurone_entree "<<i+1<<std::endl;
+		for (int j=0;j<L.arete.nbColumns;i++)
+		{	
+			if(j==0)
+				std::cout<<"w_0= "<<L.arete[i][0]<<std::endl;
+			else
+				std::cout<<"w_"<<j<<"= "<<L.arete[i][j]<<std::endl;
+		}
+		
+	}
 }
 
 
@@ -84,13 +100,13 @@ double Layer::fonctionActivation(double x) {
     return 1 / (1 + std::exp(-x));
 }
 
-  //Derivee de la fonction d'activation
 
 double Layer::dfonctionActivation(double x) {
+  
+  //Derivee de la fonction d'activation
 	
-    return std::exp(-x) / (1 + std::exp(-x))^2;
+    return 1 / (1 + std::exp(-x));
 }
-
 
 Layer::~Layer()
 {
