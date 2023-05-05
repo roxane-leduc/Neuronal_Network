@@ -25,23 +25,15 @@ void Layer::activation(Matrix<double> col) {
 }
 
 
-
-//Definir la liste des neurones d'entréee
-void NetLayer::setInput(Matrix<double> inputList) {
-	this->inputs = inputList;
-}
-// Set your own weights, used for back propogation and adjusting weights
-
-
 // Getters
-Matrix<double> NetLayer::getInputs() {
-	return this->inputs;
+Matrix<double> Layer::getEntree() {
+	return this.entree;
 }
-Matrix<double> NetLayer::getWeights() {
-	return this->weights;
+Matrix<double> Layer::getPoids() {
+	return this.arete;
 }
-Matrix<double> NetLayer::getOutput() {
-	return this->outputs;
+Matrix<double> Layer::getSortie() {
+	return this.sortie;
 }
 
 
@@ -63,12 +55,12 @@ Layer::Layer()
 
 // remplir la matrice de poids
 
- void Layer::setWeights(Matrix<double> s) {
-	this.arete = s;
+ void Layer::setEntree(Matrix<double> e) {
+	this.entree = e;
     }
 
-void Layer::setEntree(Matrix<double> e) {
-	this.arete = s;
+void Layer::setPoids(Matrix<double> w) {
+	this.arete = w;
     }
 
 
