@@ -2,6 +2,10 @@
 #include <random>
 #include <iostream>
 
+//TACHES: mis à jour des poids
+	// Commentaires
+	//Calcul de la matrice des Deltas
+
 
 // 	Fonction qui calcule la matrice de sortie
 Matrix<double>Layer::Sortie() {
