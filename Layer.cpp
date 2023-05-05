@@ -36,11 +36,6 @@ Matrix<double> Layer::getSortie() {
 	return this.sortie;
 }
 
-
-
-    
-}
-
 /
 // Constructeur de layer 
 // Nbe nombre de neurones en entree
@@ -72,10 +67,12 @@ Layer::Layer(int Nbe, int Nbs)
 
 void Layer::calculerDelta(Layer L)
 {
+	
 }
 
 void Layer::displayWeight(Matrix weight)
 {
+	
 }
 
 
@@ -84,6 +81,14 @@ void Layer::displayWeight(Matrix weight)
 double Layer::fonctionActivation(double x) {
   
   //Fonction sigmoide standard 
+    return 1 / (1 + std::exp(-x));
+}
+
+
+double Layer::dfonctionActivation(double x) {
+  
+  //Derivee de la fonction d'activation
+	
     return 1 / (1 + std::exp(-x));
 }
 
