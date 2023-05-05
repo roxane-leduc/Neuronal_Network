@@ -3,7 +3,7 @@
 #include <iostream>
 
 
-// 	Fonction qui calcule la matrice de sortie
+// 	Fonction qui calcule le vecteur de sortie
 Matrix<double>Layer::Sortie() {
     // X = W * I
     this.sortie = this.arete * this.entree;
@@ -84,13 +84,13 @@ double Layer::fonctionActivation(double x) {
     return 1 / (1 + std::exp(-x));
 }
 
+  //Derivee de la fonction d'activation
 
 double Layer::dfonctionActivation(double x) {
-  
-  //Derivee de la fonction d'activation
 	
-    return 1 / (1 + std::exp(-x));
+    return std::exp(-x) / (1 + std::exp(-x))^2;
 }
+
 
 Layer::~Layer()
 {
