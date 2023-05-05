@@ -29,6 +29,10 @@ private:
     //! Matrice des sorties
     Matrix sortie;
     
+    //! Matrice des etiquettes
+    Matrix etiq;
+    
+    
     
     
     //! Fonction d activation utilisee par la couche
