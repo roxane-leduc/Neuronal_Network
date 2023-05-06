@@ -6,44 +6,13 @@
 	// Commentaires
 	//Calcul de la matrice des Deltas
 
+//! Constructeurs de layer 
 
-// 	Fonction qui calcule la matrice de sortie
-Matrix<double>Layer::Sortie() {
-    // X = W * I
-    this.sortie = this.arete * this.entree;
-	
-    // Applique la fonction sigmoide a toutes les sorties
-	
-    activation(this.sortie);
-    
-    return this.sortie;
-}
-
-
-// Applique la fonction sigmoide a toutes les neurones en sorties
-
-void Layer::activation(Matrix<double> col) {
-	for (size_t i = 0; i < col.size(); i++) {
-        this->sortie[i][0] = fonctionActivation(col[i][0]);
-	}
-}
-
-
-// Getters
-Matrix<double> Layer::getEntree() {
-	return this.entree;
-}
-Matrix<double> Layer::getPoids() {
-	return this.arete;
-}
-Matrix<double> Layer::getSortie() {
-	return this.sortie;
-}
-
-/
-// Constructeur de layer 
-// Nbe nombre de neurones en entree
-// Nbs nombre de neurones en sortie
+/**
+    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
+    @param nbRowsParam : le nombre de ligne de la matrice
+    @param nbColumnsParam : le nombre de colonne de la matrice
+    */
 
 Layer::Layer()
 {
@@ -53,29 +22,108 @@ Layer::Layer()
 }
 
 
-// Setter
-
- void Layer::setEntree(Matrix<double> e) {
-	this.entree = e;
-    }
-
- void Layer::setEtiquette(Matrix<double> et) {
-	this.etiq = et;
-    }
-
-void Layer::setPoids(Matrix<double> w) {
-	this.arete = w;
-    }
-
-
+/**
+    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
+    @param nbRowsParam : le nombre de ligne de la matrice
+    @param nbColumnsParam : le nombre de colonne de la matrice
+    */
 Layer::Layer(int Nbe, int Nbs)
 {
       this.Nbe=Nbe;
       this.Nbs=Nbs;
 }
 
-// Permet de calculer la matrice des deltas pour la mise a jour des poids
-// Elle prend 
+
+//! Fonction qui calcule la matrice de sortie
+/**
+    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
+    @param nbRowsParam : le nombre de ligne de la matrice
+    @param nbColumnsParam : le nombre de colonne de la matrice
+    */
+
+Matrix<double>Layer::sortie() {
+    // X = W * I
+    this.sortie.weight = this.arete.weight * this.entree.weight;
+	
+    // Applique la fonction sigmoide a toutes les sorties
+	
+    activation(this.sortie.weight);
+    
+    return this.sortie.weight;
+}
+
+
+//! Applique la fonction sigmoide a toutes les neurones en sorties
+/**
+    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
+    @param nbRowsParam : le nombre de ligne de la matrice
+    @param nbColumnsParam : le nombre de colonne de la matrice
+    */
+
+void Layer::activation(Matrix<double> col) {
+	for (size_t i = 0; i < col.size(); i++) {
+        this.sortie.weight[i][0] = fonctionActivation(col.weight[i][0]);
+	}
+}
+
+
+//! Getters
+/**
+    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
+    @param nbRowsParam : le nombre de ligne de la matrice
+    @param nbColumnsParam : le nombre de colonne de la matrice
+    */
+
+Matrix<double> Layer::getEntree() {
+	return this.entree.weight;
+}
+Matrix<double> Layer::getPoids() {
+	return this.arete.weight;
+}
+Matrix<double> Layer::getSortie() {
+	return this.sortie.weight;
+}
+
+
+
+//! Setter
+/**
+    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
+    @param nbRowsParam : le nombre de ligne de la matrice
+    @param nbColumnsParam : le nombre de colonne de la matrice
+    */
+
+ void Layer::setEntree(Matrix<double> e) {
+	this.entree = e;
+    }
+
+/**
+    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
+    @param nbRowsParam : le nombre de ligne de la matrice
+    @param nbColumnsParam : le nombre de colonne de la matrice
+    */
+ void Layer::setEtiquette(Matrix<double> et) {
+	this.etiq = et;
+    }
+
+/**
+    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
+    @param nbRowsParam : le nombre de ligne de la matrice
+    @param nbColumnsParam : le nombre de colonne de la matrice
+    */
+
+void Layer::setPoids(Matrix<double> w) {
+	this.arete = w;
+    }
+
+
+//! Permet de calculer la matrice des deltas pour la mise a jour des poids
+//! Elle prend
+/**
+    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
+    @param nbRowsParam : le nombre de ligne de la matrice
+    @param nbColumnsParam : le nombre de colonne de la matrice
+    */
 
 void Layer::calculerDelta(Layer L, Matrix d_pred, Matrix biais)
 {
@@ -109,27 +157,37 @@ void Layer::calculerDelta(Layer L, Matrix d_pred, Matrix biais)
 	}
 }
 
-// Affiche les poids de la matrice de poids
+//! Affiche les poids de la matrice de poids
+/**
+    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
+    @param nbRowsParam : le nombre de ligne de la matrice
+    @param nbColumnsParam : le nombre de colonne de la matrice
+    */
 
-void Layer::displayWeight(Layer L)
+void Layer::displayWeight()
 {
 	std::cout<<"Affichage de la matrice des poids"<<std::endl;
-	for (int i=0;i<L.arete.nbRows;i++)
+	for (int i=0;i<this.arete.nbRows;i++)
 	{
 		std::cout<<"Neurone_entree "<<i+1<<std::endl;
-		for (int j=0;j<L.arete.nbColumns;i++)
+		for (int j=0;j<this.arete.nbColumns;i++)
 		{	
 			if(j==0)
-				std::cout<<"w_0= "<<L.arete.weight[i][0]<<std::endl;
+				std::cout<<"w_0= "<<this.arete.weight[i][0]<<std::endl;
 			else
-				std::cout<<"w_"<<j<<"= "<<L.arete.weight[i][j]<<std::endl;
+				std::cout<<"w_"<<j<<"= "<<this.arete.weight[i][j]<<std::endl;
 		}
 		
 	}
 }
 
 
-//Definition de la fonction d'activation
+//! Definition de la fonction d'activation
+/**
+    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
+    @param nbRowsParam : le nombre de ligne de la matrice
+    @param nbColumnsParam : le nombre de colonne de la matrice
+    */
 
 double Layer::fonctionActivation(double x) {
   
@@ -137,6 +195,11 @@ double Layer::fonctionActivation(double x) {
     return 1 / (1 + std::exp(-x));
 }
 
+/**
+    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
+    @param nbRowsParam : le nombre de ligne de la matrice
+    @param nbColumnsParam : le nombre de colonne de la matrice
+    */
 
 double Layer::dfonctionActivation(double x) {
   
