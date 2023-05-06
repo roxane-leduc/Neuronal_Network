@@ -120,9 +120,9 @@ void Layer::displayWeight(Layer L)
 		for (int j=0;j<L.arete.nbColumns;i++)
 		{	
 			if(j==0)
-				std::cout<<"w_0= "<<L.arete[i][0]<<std::endl;
+				std::cout<<"w_0= "<<L.arete.weight[i][0]<<std::endl;
 			else
-				std::cout<<"w_"<<j<<"= "<<L.arete[i][j]<<std::endl;
+				std::cout<<"w_"<<j<<"= "<<L.arete.weight[i][j]<<std::endl;
 		}
 		
 	}
