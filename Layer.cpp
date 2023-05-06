@@ -9,23 +9,21 @@
 //! Constructeurs de layer 
 
 /**
-    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
-    @param nbRowsParam : le nombre de ligne de la matrice
-    @param nbColumnsParam : le nombre de colonne de la matrice
-    */
+    @brief Constructeur de la classe, la couche n'a aucun neurone
+   
+  */
 
 Layer::Layer()
 {
       this.Nbe=0;
-      this.Nbs=0;
-      this.arete=arete(0,0);    
+      this.Nbs=0; 
 }
 
 
 /**
-    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
-    @param nbRowsParam : le nombre de ligne de la matrice
-    @param nbColumnsParam : le nombre de colonne de la matrice
+    @brief Constructeur de la classe, la couche a Nbe neurones
+    @param NbeParam : le nombre de neurones de la couche
+    @param NbsParam : le nombre de neurones de la couche suivante
     */
 Layer::Layer(int Nbe, int Nbs)
 {
@@ -34,18 +32,20 @@ Layer::Layer(int Nbe, int Nbs)
 }
 
 
-//! Fonction qui calcule la matrice de sortie
+//! Fonctions
+
 /**
-    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
-    @param nbRowsParam : le nombre de ligne de la matrice
-    @param nbColumnsParam : le nombre de colonne de la matrice
+    @brief Fonction qui permet de remplir le vecteur des sorties
+       //! produit matrice vecteur avec W : matrice des poids , I vecteur des entrees, X, vecteur des sortiesX = W * I
+      
+    
     */
 
 Matrix<double>Layer::sortie() {
-    // X = W * I
+ 
     this.sortie.weight = this.arete.weight * this.entree.weight;
 	
-    // Applique la fonction sigmoide a toutes les sorties
+     //! Applique la fonction d'activation a toutes les sorties
 	
     activation(this.sortie.weight);
     
@@ -53,11 +53,11 @@ Matrix<double>Layer::sortie() {
 }
 
 
-//! Applique la fonction sigmoide a toutes les neurones en sorties
+//! Applique la fonction d'activation a toutes les neurones en sorties
 /**
-    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
-    @param nbRowsParam : le nombre de ligne de la matrice
-    @param nbColumnsParam : le nombre de colonne de la matrice
+    @brief Fonction qui permet d'appliquer la fonction d'activation aux éléments d'un vecteur
+    @param colParam : le vecteur auquel on veut appliquer la fonction d'activation
+    
     */
 
 void Layer::activation(Matrix<double> col) {
@@ -67,11 +67,10 @@ void Layer::activation(Matrix<double> col) {
 }
 
 
-//! Getters
+
 /**
-    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
-    @param nbRowsParam : le nombre de ligne de la matrice
-    @param nbColumnsParam : le nombre de colonne de la matrice
+    @brief Getters
+    
     */
 
 Matrix<double> Layer::getEntree() {
@@ -84,13 +83,22 @@ Matrix<double> Layer::getSortie() {
 	return this.sortie.weight;
 }
 
+Matrix<double> Layer::getDelta() {
+	return this.delta.weight;
+}
+
+Matrix<double> Layer::getEtiq() {
+	return this.etiq.weight;
+}
+
+Matrix<double> Layer::getD() {
+	return this.d.weight;
+}
 
 
-//! Setter
 /**
-    @brief Constructeur de la classe, tous les poids de la matrice sont nuls
-    @param nbRowsParam : le nombre de ligne de la matrice
-    @param nbColumnsParam : le nombre de colonne de la matrice
+    @brief Setter
+   
     */
 
  void Layer::setEntree(Matrix<double> e) {
