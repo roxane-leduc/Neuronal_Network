@@ -43,13 +43,15 @@ private:
     //! Fonction d activation utilisee par la couche
     double fonctionActivation(double x);
     
-    //! Getter et Setter
+    //! Getter 
     
     
     Matrix<double> getEntree();
-    Matrix<double> getPoids() ;
+    Matrix<double> getPoids();
     Matrix<double> getSortie();
-    
+    Matrix<double> getDelta() ;
+    Matrix<double> getEtiq();
+    Matrix<double> getD();    
     
     //! Setter
     
