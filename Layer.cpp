@@ -132,6 +132,28 @@ void Layer::displayWeight()
 	}
 }
 
+//! Genere et assigne des poids aleatoires à cette couche
+//! Donne un intervalle entre -1/sqrt(numInput) a +1/sqrt(numInput)
+void Layer::PoidsAleatoires() {
+//!    srand(1000); //Peut etre utiliser pour generer des nombres aleatoirement
+    double minmax = 1 / sqrt(this->numInputs); //define the + and - range
+    double rand; // hold the next random weight value
+    
+	for (int i = 0; i < this->numOutputs; i++) {
+		this.arete.weight.push_back({});
+		for (int j = 0; j < this->numInputs; j++) {
+            //! genere
+			std::random_device rd;   
+			std::mt19937 gen(rd());
+			//std::mt19937 gen(rand()); //my seed
+			std::uniform_real_distribution<double> dis(-minmax, minmax);
+
+			rand = dis(gen); //Generate a new random value
+			this.arete.weight[i].push_back(rand);
+		}
+	}
+}
+
 
 double Layer::fonctionActivation(double x) {
   
