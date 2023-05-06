@@ -8,76 +8,78 @@
 
 Layer::Layer()
 {
-      this.Nbe=0;
-      this.Nbs=0; 
+      this->Nbe=0;
+      this->Nbs=0; 
 }
 
 Layer::Layer(int Nbe, int Nbs)
 {
-      this.Nbe=Nbe;
-      this.Nbs=Nbs;
+      this->Nbe=Nbe;
+      this->Nbs=Nbs;
 }
 
 //! Fonctions
 
 
-Matrix<double>Layer::sortie() {
+ Matrix Layer::Sortie() {
     
      //! produit matrice vecteur avec W : matrice des poids , I vecteur des entrees, X, vecteur des sortiesX = W * I
+
+
  
-    this.sortie.weight = this.arete.weight * this.entree.weight;
-	
+    sortie = arete * entree;
      //! Applique la fonction d'activation a toutes les sorties
 	
-    activation(this.sortie.weight);
+    activation(sortie);
     
-    return this.sortie.weight;
+    return sortie;
 }
 
 
-void Layer::activation(Matrix<double> col) {
-	for (size_t i = 0; i < col.size(); i++) {
+void Layer::activation(Matrix col) {
+
+	for (size_t i = 0; i < (col.nbRows); i++) {
 		
 	//! Applique la fonction d'activation a toutes les neurones du vecteur en entree
-        this.sortie.weight[i][0] = fonctionActivation(col.weight[i][0]);
+     sortie.weight[i][0] = fonctionActivation(col.weight[i][0]);
 	}
 }
 
-Matrix<double> Layer::getEntree() {
-	return this.entree.weight;
+Matrix Layer::getEntree() {
+	return entree;
 }
 
-Matrix<double> Layer::getPoids() {
-	return this.arete.weight;
+Matrix Layer::getPoids() {
+	return arete;
 }
 
-Matrix<double> Layer::getSortie() {
-	return this.sortie.weight;
+Matrix Layer::getSortie() {
+	return sortie;
 }
 
-Matrix<double> Layer::getDelta() {
-	return this.delta.weight;
+Matrix Layer::getDelta() {
+	return delta;
 }
 
-Matrix<double> Layer::getEtiq() {
-	return this.etiq.weight;
+Matrix Layer::getEtiq() {
+	return etiq;
 }
 
 
-Matrix<double> Layer::getD() {
-	return this.d.weight;
+Matrix Layer::getD() {
+	return d;
 }
 
- void Layer::setEntree(Matrix<double> e) {
-	this.entree = e;
+ void Layer::setEntree(Matrix e) {
+	entree = e;
     }
 
- void Layer::setEtiquette(Matrix<double> et) {
-	this.etiq = et;
+ void Layer::setEtiquette(Matrix et) {
+	etiq = et;
     }
 
-void Layer::setPoids(Matrix<double> w) {
-	this.arete = w;
+void Layer::setPoids(Matrix w) {
+	arete = w;
     }
 
 void Layer::calculerDelta(Layer L)
@@ -87,24 +89,25 @@ void Layer::calculerDelta(Layer L)
 	double s;
 	double n=1;
 	
-	for (int i=0;i<this.arete.nbRows;i++)
+	
+	for (int i=0;i<arete.nbRows;i++)
 	{
-		for(int j=1;j<=this.arete.nbColumns;j++)
+		for(int j=1;j<=arete.nbColumns;j++)
 		{
 			//Calcul de la somme pondérées des poids pour le neurone de sortis j
 			Ij=L.arete.weight[j][0];
 			s=0;
-			for(int k=0;k<this.arete.nbRows;k++)
+			for(int k=0;k<arete.nbRows;k++)
 			{
-				Ij=Ij+this.arete.weight[k][j];
-				s=s+L.d.weight[k][0]*this.arete.weight[k][j];
+				Ij=Ij+arete.weight[k][j];
+				s=s+L.d.weight[k][0]*arete.weight[k][j];
 			}
 			dj=dfonctionActivation(Ij)*s;
-			this.d[j]=dj;
+			d.weight[0][j]=dj;
 			if (j-1==0)
-				delta.weight[i][j-1]=n*dj*L.biais.weight[j-1];
+				delta.weight[i][j-1]=n*dj * L.biais.weight[j-1][0];
 			else
-				delta.weight[i][j-1]=n*dj*sortie.weight[i];
+				delta.weight[i][j-1]=n*dj*sortie.weight[i][0];
 			
 		}
 		
@@ -116,15 +119,15 @@ void Layer::calculerDelta(Layer L)
 void Layer::displayWeight()
 {
 	std::cout<<"Affichage de la matrice des poids"<<std::endl;
-	for (int i=0;i<this.arete.nbRows;i++)
+	for (int i=0;i<arete.nbRows;i++)
 	{
 		std::cout<<"Neurone_entree "<<i+1<<std::endl;
-		for (int j=0;j<this.arete.nbColumns;i++)
+		for (int j=0;j<arete.nbColumns;i++)
 		{	
 			if(j==0)
-				std::cout<<"w_0= "<<this.arete.weight[i][0]<<std::endl;
+				std::cout<<"w_0= "<<arete.weight[i][0]<<std::endl;
 			else
-				std::cout<<"w_"<<j<<"= "<<this.arete.weight[i][j]<<std::endl;
+				std::cout<<"w_"<<j<<"= "<<arete.weight[i][j]<<std::endl;
 		}
 		
 	}
@@ -133,23 +136,7 @@ void Layer::displayWeight()
 //! Genere et assigne des poids aleatoires à cette couche
 //! Donne un intervalle entre -1/sqrt(numInput) a +1/sqrt(numInput)
 void Layer::PoidsAleatoires() {
-//!    srand(1000); //Peut etre utiliser pour generer des nombres aleatoirement
-    double minmax = 1 / sqrt(this->numInputs); //define the + and - range
-    double rand; // hold the next random weight value
-    
-	for (int i = 0; i < this->numOutputs; i++) {
-		this.arete.weight.push_back({});
-		for (int j = 0; j < this->numInputs; j++) {
-            //! genere
-			std::random_device rd;   
-			std::mt19937 gen(rd());
-			//std::mt19937 gen(rand()); //my seed
-			std::uniform_real_distribution<double> dis(-minmax, minmax);
-
-			rand = dis(gen); //Generate a new random value
-			this.arete.weight[i].push_back(rand);
-		}
-	}
+	;
 }
 
 
