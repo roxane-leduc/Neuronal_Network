@@ -19,7 +19,14 @@ private:
     //! Vecteur des biais de la couche
     Matrix biais;
     
-    void activation(Layer L);
+    /**
+    @brief Fonction qui permet d'appliquer la fonction d'activation aux éléments d'un vecteur
+    @param colParam : le vecteur auquel on veut appliquer la fonction d'activation
+    
+    */
+    void activation(Matrix<double> col);
+    
+    
 
     //! Matrice contenant les poids des aretes reliant cette couche a la suivante
     Matrix arete;
@@ -43,43 +50,146 @@ private:
     
     
     
-    //! Fonction d activation utilisee par la couche
+    /**
+        @brief Permet de definir la fonction d'activation
+        @param xParam : le reel pour lequel on souhaite calculer la fonction d'activation
+
+    */
+
     double fonctionActivation(double x);
     
-    //! Getter 
     
+     
+    /**
+        @brief Permet de definir la derivee de la fonction d'activation
+        @param xParam : le reel pour lequel on souhaite calculer la derivee de la fonction d'activation
+
+    */
     
+    double Layer::dfonctionActivation(double x)
+     
+        
+   
+    /**
+        @brief Getters
+    
+    */
+
+    /**
+         @brief Retourne le vecteur des entrees
+    
+    */  
     Matrix<double> getEntree();
+    
+    /**
+        @brief Retourne la matrice des poids
+    
+    */
+
     Matrix<double> getPoids();
+    
+    
+    /**
+        @brief Retourne le vecteur des sorties
+    
+    */
+    
     Matrix<double> getSortie();
+    
+    /**
+        @brief Retourne la matrice des delta
+    
+    */
+
     Matrix<double> getDelta() ;
+    
+
+    /**
+         @brief Retourne le vecteur des etiquettes
+    
+    */
+
     Matrix<double> getEtiq();
+    
+    
+    /**
+        @brief Retourne le vecteur des delta_j
+    
+    */
+
     Matrix<double> getD();    
     
     //! Setter
     
+    /**
+    @brief Permet de donner à la matrice des poids des neurones de la couche
+    @param eParam : matrice
+    */
     void setPoids(Matrix<double> s);
+    
+    
+     /**
+        @brief Permet de donner une valeur au vecteur des entrees de la couche
+        @param eParam : vecteur 
+   
+    */
     void setEntree(Matrix<double> e);
+    
+    
+    /**
+        @brief Permet de donner une valeur au vecteur des etiquettes des neurones de la couche
+        @param eParam : vecteur 
+    */
+    
     void setEtiquette(Matrix<double> et);
     
     
     
 
 public:
-    //! Constructeur
+    
+    //! Constructeurs
+    
+    /**
+    @brief Constructeur de la classe, la couche n'a aucun neurone
+       
+    */
+
     Layer();
-    Layer(int Nbe, int Nbs, Matrix arete, Matrix delta, double fonctionActivation);
+   
+
+    /**
+        @brief Constructeur de la classe, la couche a Nbe neurones
+        @param NbeParam : le nombre de neurones de la couche
+        @param NbsParam : le nombre de neurones de la couche suivante
+    */
     Layer(int Nbe, int Nbs);
     
-    //! Calcul de la matrice des deltas
+    
+
+
+    /**
+        @brief Fonction qui permet de remplir le vecteur des sorties
+    
+    */
+    Matrix<double>Layer::sortie()
+
    
-    void calculerDelta(Layer L, Matrix d_pred, Matrix biais)
+    /**
+        @brief Fonction qui Permet de calculer la matrice des deltas pour la mise a jour des poids
+        @param LParam : Couche qui suit la couche actuelle
     
-    //! Affiche la matrice des poids
+    */
+    void calculerDelta(Layer L);
+    
+    //! Affiche les poids de la matrice de poids
+    /**
+        @brief Permets d'afficher la matrice des poids
+    
+    */
+
     void displayWeight();
-    
-    //! Calcul et remplissage du vecteur de sortie
-    Matrix<double> sortie()
+   
 
     //! Destructeur
     ~Layer();
