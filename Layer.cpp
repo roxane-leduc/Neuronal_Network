@@ -75,14 +75,38 @@ Layer::Layer(int Nbe, int Nbs)
 }
 
 // Permet de calculer la matrice des deltas pour la mise a jour des poids
+// Elle prend 
 
-void Layer::calculerDelta(Layer L)
+void Layer::calculerDelta(Layer L, Matrix d_pred, Matrix biais)
 {
-	double Ij=0;
-	for 
+	double Ij;
+	double dj;
+	double s;
+	double n=1;
 	
-	//Calcul de la somme pondérées des poids pour le neurone de sortis j
+	for (int i=0;i<this.arete.nbRows;i++)
+	{
+		for(int j=1;j<this.arete.nbColumns;j++)
+		{
+			//Calcul de la somme pondérées des poids pour le neurone de sortis j
+			Ij=L.arete.weight[j][0];
+			s=0;
+			for(int k=0;k<this.arete.nbRows;k++)
+			{
+				Ij=Ij+this.arete.weight[k][j];
+				s=s+d_pred.weight[k][0]*this.arete.weight[k][j];
+			}
+			dj=dfonctionActivation(Ij)*s;
+			this.d[j]=dj;
+			if (j-1==0)
+				delta.weight[i][j-1]=n*dj*biais.weight[j-1];
+			else
+				delta.weight[i][j-1]=n*dj*sortie.weight[j-1];
+			
+		}
 	
+	
+	}
 }
 
 // Affiche les poids de la matrice de poids
