@@ -16,6 +16,9 @@ private:
     //! Nombre de neurones que l'on a en sortie
     int Nbs;   
     
+    //! Vecteur des biais de la couche
+    Matrix biais;
+    
     void activation(Layer L);
 
     //! Matrice contenant les poids des aretes reliant cette couche a la suivante
