@@ -66,7 +66,7 @@ private:
 
     */
     
-    double Layer::dfonctionActivation(double x)
+    double Layer::dfonctionActivation(double x);
      
         
    
@@ -122,10 +122,18 @@ private:
     //! Setter
     
     /**
-    @brief Permet de donner à la matrice des poids des neurones de la couche
+    @brief Permet de donner des valeurs aux élèments de la matrice des poids des neurones de la couche 
     @param eParam : matrice
     */
     void setPoids(Matrix<double> s);
+    
+    /**
+    
+    @brief Permet de donner des valeurs aux élèments la matrice des poids des neurones de la couche
+    
+    */
+        
+    void PoidsAleatoires();
     
     
      /**
