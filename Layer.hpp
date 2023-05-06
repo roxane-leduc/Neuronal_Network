@@ -15,6 +15,7 @@ private:
     int Nbe;
     //! Nombre de neurones que l'on a en sortie
     int Nbs;   
+    
     void activation(Layer L);
 
     //! Matrice contenant les poids des aretes reliant cette couche a la suivante
@@ -23,14 +24,18 @@ private:
     //! Matrice contenant les delta de chaque poids 
     Matrix delta;
     
-    //! Matrice des entrees
+    //! Vecteur des entrees
     Matrix entree;
     
-    //! Matrice des sorties
+    //! Vecteur des sorties
     Matrix sortie;
     
-    //! Matrice des etiquettes
+    //! Vecteur des etiquettes
     Matrix etiq;
+    
+     //! Vecteur des delta_j
+    Matrix d;
+    
     
     
     
@@ -40,11 +45,17 @@ private:
     
     //! Getter et Setter
     
+    
+    Matrix<double> getEntree();
+    Matrix<double> getPoids() ;
+    Matrix<double> getSortie();
+    
+    
     //! Setter
     
-    void setWeights(Matrix<double> s);
+    void setPoids(Matrix<double> s);
     void setEntree(Matrix<double> e);
-   
+    void setEtiquette(Matrix<double> et);
     
     
     
@@ -56,9 +67,14 @@ public:
     Layer(int Nbe, int Nbs);
     
     //! Calcul de la matrice des deltas
-    void calculerDelta(Layer L);
+   
+    void calculerDelta(Layer L, Matrix d_pred, Matrix biais)
+    
     //! Affiche la matrice des poids
-    void displayWeight(Matrix weight);
+    void displayWeight();
+    
+    //! Calcul et remplissage du vecteur de sortie
+    Matrix<double> sortie()
 
     //! Destructeur
     ~Layer();
