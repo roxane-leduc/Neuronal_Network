@@ -24,14 +24,6 @@ private:
     //! Matrice contenant les poids des aretes reliant cette couche a la suivante
     Matrix arete;
     
-    //! Matrice contenant les delta de chaque poids 
-    Matrix delta;
-    
-    //! Vecteur des entrees
-    Matrix entree;
-    
-    //! Vecteur des sorties
-    Matrix sortie;
     
     //! Vecteur des etiquettes
     Matrix etiq;
@@ -93,6 +85,16 @@ private:
     
 
 public:
+
+    
+    //! Matrice contenant les delta de chaque poids 
+    Matrix delta;
+    
+    //! Vecteur des entrees
+    Matrix entree;
+    
+    //! Vecteur des sorties
+    Matrix sortie;
     
     //! Constructeurs
     
