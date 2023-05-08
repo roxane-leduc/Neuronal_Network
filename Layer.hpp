@@ -10,7 +10,7 @@ using std::list;
 class Layer
 {
 private:
-    list<Neurone> neurones;
+    
     //! Nombre de neurones que l'on a en entrée
     int Nbe;
     //! Nombre de neurones que l'on a en sortie
@@ -18,13 +18,6 @@ private:
     
     //! Vecteur des biais de la couche
     Matrix biais;
-    
-    /**
-    @brief Fonction qui permet d'appliquer la fonction d'activation aux éléments d'un vecteur
-    @param colParam : le vecteur auquel on veut appliquer la fonction d'activation
-    
-    */
-    void activation(Matrix col);
     
     
 
@@ -70,55 +63,6 @@ private:
      
         
    
-    /**
-        @brief Getters
-    
-    */
-
-    /**
-         @brief Retourne le vecteur des entrees
-    
-    */  
-    Matrix getEntree();
-    
-    /**
-        @brief Retourne la matrice des poids
-    
-    */
-
-    Matrix getPoids();
-    
-    
-    /**
-        @brief Retourne le vecteur des sorties
-    
-    */
-    
-    Matrix  getSortie();
-    
-    /**
-        @brief Retourne la matrice des delta
-    
-    */
-
-    Matrix getDelta() ;
-    
-
-    /**
-         @brief Retourne le vecteur des etiquettes
-    
-    */
-
-    Matrix  getEtiq();
-    
-    
-    /**
-        @brief Retourne le vecteur des delta_j
-    
-    */
-
-    Matrix getD();    
-    
     //! Setter
     
     /**
@@ -136,12 +80,6 @@ private:
     void PoidsAleatoires();
     
     
-     /**
-        @brief Permet de donner une valeur au vecteur des entrees de la couche
-        @param eParam : vecteur 
-   
-    */
-    void setEntree(Matrix e);
     
     
     /**
@@ -197,6 +135,74 @@ public:
     */
 
     void displayWeight();
+
+
+     /**
+        @brief Permet de donner une valeur au vecteur des entrees de la couche
+        @param eParam : vecteur 
+   
+    */
+    void setEntree(Matrix e);
+
+
+    /**
+    @brief Fonction qui permet d'appliquer la fonction d'activation aux éléments d'un vecteur
+    @param colParam : le vecteur auquel on veut appliquer la fonction d'activation
+    
+    */
+    void activation(Matrix col);
+    
+
+
+    /**
+        @brief Getters
+    
+    */
+
+    /**
+         @brief Retourne le vecteur des entrees
+    
+    */  
+    Matrix getEntree();
+    
+    /**
+        @brief Retourne la matrice des poids
+    
+    */
+
+    Matrix getPoids();
+    
+    
+    /**
+        @brief Retourne le vecteur des sorties
+    
+    */
+    
+    Matrix  getSortie();
+    
+    /**
+        @brief Retourne la matrice des delta
+    
+    */
+
+    Matrix getDelta() ;
+    
+
+    /**
+         @brief Retourne le vecteur des etiquettes
+    
+    */
+
+    Matrix  getEtiq();
+    
+    
+    /**
+        @brief Retourne le vecteur des delta_j
+    
+    */
+
+    Matrix getD();    
+    
    
 
     //! Destructeur
