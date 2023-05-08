@@ -24,7 +24,7 @@ private:
     @param colParam : le vecteur auquel on veut appliquer la fonction d'activation
     
     */
-    void activation(Matrix<double> col);
+    void activation(Matrix col);
     
     
 
@@ -79,14 +79,14 @@ private:
          @brief Retourne le vecteur des entrees
     
     */  
-    Matrix<double> getEntree();
+    Matrix getEntree();
     
     /**
         @brief Retourne la matrice des poids
     
     */
 
-    Matrix<double> getPoids();
+    Matrix getPoids();
     
     
     /**
@@ -94,14 +94,14 @@ private:
     
     */
     
-    Matrix<double> getSortie();
+    Matrix  getSortie();
     
     /**
         @brief Retourne la matrice des delta
     
     */
 
-    Matrix<double> getDelta() ;
+    Matrix getDelta() ;
     
 
     /**
@@ -109,7 +109,7 @@ private:
     
     */
 
-    Matrix<double> getEtiq();
+    Matrix  getEtiq();
     
     
     /**
@@ -117,7 +117,7 @@ private:
     
     */
 
-    Matrix<double> getD();    
+    Matrix getD();    
     
     //! Setter
     
@@ -125,7 +125,7 @@ private:
     @brief Permet de donner des valeurs aux élèments de la matrice des poids des neurones de la couche 
     @param eParam : matrice
     */
-    void setPoids(Matrix<double> s);
+    void setPoids(Matrix s);
     
     /**
     
@@ -141,7 +141,7 @@ private:
         @param eParam : vecteur 
    
     */
-    void setEntree(Matrix<double> e);
+    void setEntree(Matrix e);
     
     
     /**
@@ -149,7 +149,7 @@ private:
         @param eParam : vecteur 
     */
     
-    void setEtiquette(Matrix<double> et);
+    void setEtiquette(Matrix et);
     
     
     
@@ -180,7 +180,7 @@ public:
         @brief Fonction qui permet de remplir le vecteur des sorties
     
     */
-    Matrix<double>Layer::sortie()
+     Matrix Layer::Sortie();
 
    
     /**

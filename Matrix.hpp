@@ -4,11 +4,13 @@
 class Matrix
 {
 private:
-    int nbColumns;
-    int nbRows;
-    double **weight;
+    
+    
 
 public:
+    double **weight;
+    int nbColumns;
+    int nbRows;
     //! Constructeur (le parametre fait reference a la methode d initialisation de la matrice)
     
     /**
