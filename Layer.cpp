@@ -39,7 +39,7 @@ Layer::Layer(int Nbe, int Nbs)
 
 void Layer::activation(Matrix col) {
 
-	for (size_t i = 0; i < (col.nbRows); i++) {
+	for (int i = 0; i < (col.nbRows); i++) {
 		
 	//! Applique la fonction d'activation a toutes les neurones du vecteur en entree
      sortie.weight[i][0] = fonctionActivation(col.weight[i][0]);
