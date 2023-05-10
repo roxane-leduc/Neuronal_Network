@@ -99,7 +99,7 @@ void Layer::calculerDelta(Layer L)
 			s=0;
 			for(int k=0;k<arete.nbRows;k++)
 			{
-				Ij=Ij+arete.weight[k][j];
+				Ij=Ij+arete.weight[k][j]*sortie[j][0];
 				s=s+L.d.weight[k][0]*arete.weight[k][j];
 			}
 			dj=dfonctionActivation(Ij)*s;
