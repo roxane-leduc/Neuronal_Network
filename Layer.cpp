@@ -22,6 +22,7 @@ Layer::Layer(int Nbe, int Nbs)
 
 
  Matrix Layer::Sortie() {
+	 //! Matrice des poids ce sont les precedentes (de la couche avant)
     
      //! produit matrice vecteur avec W : matrice des poids , I vecteur des entrees, X, vecteur des sortiesX = W * I
 
