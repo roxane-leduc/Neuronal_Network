@@ -18,7 +18,9 @@ private:
 
 public:
     //! Constructeur
-    OutputLayer();
+    OutputLayer(int sizeIn, int sizeOut);
+    vector<double> getProba();
+    int getResult();
     //! Creer la couche de sortie
     void creer_derniere_couche(int tailleInput, int tailleOutput, TrainingFunction f);
     //! Prend en parametre une fonction correspondant a la fontion de perte du reseau, ici, l entropie croise

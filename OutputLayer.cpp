@@ -9,6 +9,16 @@ OutputLayer::OutputLayer(int sizeIn, int sizeOut)
     Proba = vector<double>(sizeOut,0.0); //vecteur de taille "sizeOut" et qui ne contient que des 0
 }
 
+vector<double> OutputLayer::getProba()
+{
+    return Proba;
+}
+
+int OutputLayer::getResult()
+{
+    return result;
+}
+
 void OutputLayer::creer_derniere_couche(int tailleInput, int tailleOutput, TrainingFunction f)
 {
 }

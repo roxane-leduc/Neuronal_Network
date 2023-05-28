@@ -91,6 +91,8 @@ public:
     */
 
     Layer();
+
+    Layer(int ne, int ns);
    
 
     /**

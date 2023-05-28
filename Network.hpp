@@ -1,45 +1,33 @@
-#ifndef __NETWORK_HPP__
-#define __NETWORK_HPP__
-
-#include "Layer.hpp"
-#include "HiddenLayer.hpp"
+#ifndef NETWORK_H
+#define NETWORK_H
 #include "Matrix.hpp"
+#include "Layer.hpp"
+#include "OutputLayer.hpp"
+#include <vector>
 
-#include <list>
-using std::list;
+using namespace std;
 
-class Network
-{
-private:
-    //! Nombre de couches cachees
-    int nbHiddenLayer;
-    //! Indicateur permettant de savoir si le reseau est efficace ou non 
-    double fiabilite;
-    Layer inputLayer;
-    Layer outputLayer;
-    list<HiddenLayer> hidden;
+class Network{
 
-public:
-    //! Constructeur
-    Network(int tailleDeHidden, int outputDim);
-    //! Entrainement du reseau
-    void training(Matrix TrainXSet, Matrix TrainYSet, double LearningRate, int TailleLot);
-    //! Mettre a jour une couche
-    void set_layer(Layer L);
-    //! Test du reseau
-    void test(Matrix TestXSet, Matrix TestYSet);
-    //! Affiche la valeur de sortie de chaque neurone
-    void forward_propagation(Matrix TrainXSet);
-    //! Afficher l’erreur au niveau de chaque couche
-    void backward_propagation(Matrix TrainXSet);
-    //! Mise a jour de la valeur des poids (prend en parametre une vitesse d apprentissage)
-    void update_poids(double learningRate);
-    //! Observer la sortie du reseau
-    void display_result();
-    //! Connaitre la fiabilite du reseau
-    void calcul_fiabilite();
-    //! Destructeur
-    ~Network();
-}
+    public:
+            Network(const int intputDim, vector<int> hidDim, const int outputDim);
+            //Network(int intputDim, vector<int> hidDim, int outputDim,vector<char*> fonctions_activations);
+            //void setCouche(Layer L);
+            //void dispaly_result();
+            double calcul_fiabilite(Matrix TestYset);
+            //void train(Matrix TrainXset,Matrix TrainYset, double leaningRate);
+            void train(Matrix TrainX ,Matrix TrainY,double learningRate,int batch_size,int epochs=10);
+            double test(Matrix& TestX, Matrix& TestY,int batchsize);
+            //~Network();
 
+    private: 
+            vector<Layer> couches;
+            OutputLayer fcouche;
+            void forward_propagation(Matrix TrainXset);
+            void backward_propagation(Matrix TrainYset);
+            void update_weight(double learningRate);
+            double cross_entropy(Matrix TrainYset);
+
+
+};
 #endif
