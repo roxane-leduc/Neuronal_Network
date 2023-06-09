@@ -1,0 +1,31 @@
+# Executables : 
+main : obj/test_fnn.o obj/DataSource.o obj/HiddenLayer.o obj/Layer.o obj/Matrix.o obj/Network.o obj/Neurone.o obj/OutputLayer.o obj/TrainingFunction.o 
+g++ -g obj/test_fnn.o obj/DataSource.o obj/HiddenLayer.o obj/Layer.o obj/Matrix.o obj/Network.o obj/Neurone.o obj/OutputLayer.o obj/TrainingFunction.o -o main
+
+# Objets : 
+test_fnn.o : src/test_fnn.cpp include/Matrix.hpp include/Network.hpp include/DataSource.hpp
+g++ -g -Wall -c src/test_fnn.cpp -o obj/test_fnn.o
+
+DataSource.o : src/DataSource.cpp include/DataSource.hpp include/Matrix.hpp 
+g++ -g -Wall -c src/DataSource.cpp -o obj/DataSource.o -lopencv_core -lopencv_imgproc
+
+HiddenLayer.o : src/HiddenLayer.cpp include/HiddenLayer.hpp include/Layer.hpp
+g++ -g -Wall -c src/HiddenLayer.cpp -o obj/HiddenLayer.o 
+
+Layer.o : src/Layer.cpp include/Layer.hpp include/Matrix.hpp include/Neurone.hpp include/TrainingFunction.hpp
+g++ -g -Wall -c src/Layer.cpp -o obj/Layer.o 
+
+Matrix.o : src/Matrix.cpp include/Matrix.hpp
+g++ -g -Wall -c src/Matrix.cpp -o obj/Matrix.o
+
+Network.o : src/Network.cpp include/Network.hpp include/Matrix.hpp include/Layer.hpp include/OutputLayer.hpp
+g++ -g -Wall -c src/Network.cpp -o obj/Network.o
+
+Neurone.o : src/Neurone.cpp include/Neurone.hpp 
+g++ -g -Wall -c src/Neurone.cpp -o obj/Neurone.o
+
+OutputLayer.o : src/OutputLayer.cpp include/OutputLayer.hpp include/Layer.hpp include/TrainingFunction.hpp 
+g++ -g -Wall -c src/OutputLayer.cpp -o obj/OutputLayer.o
+
+TrainingFunction.o : src/TrainingFunction.cpp include/TrainingFunction.hpp include/Matrix.hpp
+g++ -g -Wall -c src/TrainingFunction.cpp -o obj/TrainingFunction.o
