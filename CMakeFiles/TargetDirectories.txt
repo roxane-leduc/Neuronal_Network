@@ -1,0 +1,3 @@
+/home/heli/Documents/GM8/Cpp/Neuronal_Network (1)/CMakeFiles/rebuild_cache.dir
+/home/heli/Documents/GM8/Cpp/Neuronal_Network (1)/CMakeFiles/edit_cache.dir
+/home/heli/Documents/GM8/Cpp/Neuronal_Network (1)/CMakeFiles/test_fnn.dir
